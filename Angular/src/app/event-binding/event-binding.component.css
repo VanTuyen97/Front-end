@@ -1,0 +1,16 @@
+.title {
+  font-size: 1.2em;
+  color: #033d25;
+  margin-bottom: 0;
+  margin-left: 40%;
+}
+.part h2{
+  color: #1a52cac7;
+}
+.part h2 a {
+  text-decoration: none;
+}
+
+.result {
+  color: #f83403;
+}

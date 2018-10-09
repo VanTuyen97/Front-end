@@ -1,0 +1,50 @@
+<h1 class="title">
+  bracket!
+</h1>
+
+<div class="part">
+  <h2><a href="https://angular.io/guide/template-syntax#property-binding--property-">Property
+      binding</a></h2>
+  <input  [attr.class]="'notice'" [value]="hero.name"/> <span>  use [attr.class]="'notice'" [value]="hero.name"</span><br>
+  <input  bind-class="'notice'" bind-value="hero.name"/> <span>  use bind-class="'notice'" bind-value="hero.name"</span><br>
+  <span>access attribute html element (alter dom)</span>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="part">
+  <h2><a href="https://angular.io/guide/template-syntax#class-binding">class binding</a></h2>
+  <span [class.notice]="hero.id == 1"> use expression true-red, false-black</span>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div [class]="'part'">
+  <h2><a href="https://angular.io/guide/template-syntax#style-binding">style binding</a></h2>
+  <span [style.color]="true?'red':'black'">use expression to define type style</span>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="part">
+    <h2><a href="https://angular.io/guide/template-syntax#ngclass">NgClass</a></h2>
+    <span class = "modified" [ngClass]="attributeClasses">add or remove many class at the same time</span>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="part">
+    <h2><a href="https://angular.io/guide/template-syntax#ngstyle">NgStyle</a></h2>
+    <span [ngStyle]="attributeStyle">Update an HTML element styles.</span>
+</div>

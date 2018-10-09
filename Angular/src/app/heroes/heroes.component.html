@@ -1,0 +1,20 @@
+<ul class="heroes">
+  <!--*ngFor director tell angular to iterate over a list-->
+  <!--(even), {{value}}, [property] bind program data to and from the dom, responding to user input-->
+  <li *ngFor="let hero of heroes"
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)"
+    routerLink="/detail/{{hero.id}}">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<div>
+  <label>Hero name:
+    <input #heroName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(heroName.value); heroName.value=''">
+    add
+  </button>
+</div>

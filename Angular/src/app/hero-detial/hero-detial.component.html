@@ -1,0 +1,14 @@
+<div *ngIf="hero">
+  <!-- use pipes to format data transfer-->
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <!-- [(ngModel)] two way data binding use in form (login,..)-->
+      <input [(ngModel)]="hero.name" placeholder="name" />
+    </label>
+  </div>
+  <!-- defines name of class attribute at runtime-->
+  <button [class.tuyen]="hero.id == 15" (click)="goBack()">back</button>
+  <button (click)="save()">save</button>
+</div>

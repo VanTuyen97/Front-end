@@ -1,0 +1,46 @@
+<h1 class="title">
+  event-binding works!
+</h1>
+<div class="part">
+  <h2>1. <a href="https://angular.io/guide/template-syntax#target-event">target event</a></h2>
+  <span style="color:red;" (click)="evenClick()">use (click)</span><br>
+  <span style="color:red;" on-click="evenClick()">use on-click</span><br>
+  <br>
+  <span>use (click)="evenClick()</span>
+</div>
+<br>
+<br>
+<br>
+<div class="part">
+  <h2>2. <a href="https://angular.io/guide/template-syntax#event-and-event-handling-statements">$event
+      and event handling statements</a></h2>
+
+  <table>
+    <tr>
+      <td><label>id: </label></td>
+      <td><input [value]="hero.id" (input)="hero.id=$event.target.value" /></td>
+    </tr>
+    <tr>
+      <td><label>name: </label></td>
+      <td><input [value]="hero.name" (input)="hero.name=$event.target.value"/><span>   use [value]="hero.name" (input)="hero.name=$event.target.value"</span></td>
+    </tr>
+    <td></td>
+    <td><button (click)="eventHandling()">eventHandling</button></td>
+  </table>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="part">
+    <!-- FormModule is required to use NgModole-->
+    <!-- import FormsModule in imports property of @NgModule in app.module.ts file (class AppModule)-->
+    <h2><a href="https://angular.io/guide/template-syntax#ngmodel---two-way-binding-to-form-elements-with-ngmodel">NgModel</a></h2>
+    <span>{{hero.id}}</span><br>
+    <input [(ngModel)]="hero.name"/><span>   use [(ngModel)]="hero.name"</span><br>
+    <input bindon-ngModel = "hero.name"/>
+    <button (click)="eventHandling()">update</button>
+  </div>

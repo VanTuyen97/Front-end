@@ -13,6 +13,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { BracketComponent } from './bracket/bracket.component';
+import { BuiltInComponent } from './built-in/built-in.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BracketComponent } from './bracket/bracket.component';
     MessageComponent,
     DashboardComponent,
     EventBindingComponent,
-    BracketComponent
+    BracketComponent,
+    BuiltInComponent
   ],
   imports: [
     // other modules whose exported classes are needed by component templates declared in thid NgModule

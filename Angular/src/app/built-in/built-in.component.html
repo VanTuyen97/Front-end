@@ -1,0 +1,87 @@
+<h1 class="title">
+  built-in directives!
+</h1>
+
+<div class="part">
+  <h2><a href="https://angular.io/guide/template-syntax#ngclass">NgClass</a></h2>
+  <span class="modified" [ngClass]="attributeClasses">add or remove many class at the same time</span>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="part">
+  <h2><a href="https://angular.io/guide/template-syntax#ngstyle">NgStyle</a></h2>
+  <span [ngStyle]="attributeStyle">Update an HTML element styles.</span>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="part">
+  <!-- FormModule is required to use NgModole-->
+  <!-- import FormsModule in imports property of @NgModule in app.module.ts file (class AppModule)-->
+  <h2><a href="https://angular.io/guide/template-syntax#ngmodel---two-way-binding-to-form-elements-with-ngmodel">NgModel</a></h2>
+  <span>{{hero.id}}</span><br>
+  <input [(ngModel)]="hero.name" /><span> use [(ngModel)]="hero.name"</span><br>
+  <input bindon-ngModel="hero.name" /> <span> use bindon-ngModel = "hero.name"</span><br>
+  <input [(ngModel)]="hero.name" (ngModelChange)="hero.name=$event" /><span> use
+    [(ngModel)]="hero.name" (ngModelChange)="hero.name=$event"</span><br> <button (click)="eventHandling()">update</button>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="part">
+  <h2><a href="https://angular.io/guide/template-syntax#ngif">*ngIf</a></h2>
+  <button (click)="changeStatus()">on/of</button><br>
+  <span *ngIf="status" class="notice"> use *ngIf="status"</span>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="part">
+  <h2><a href="https://angular.io/guide/template-syntax#ngforof">*ngForOf</a></h2>
+  <span>use *ngFor="let hero of heroes"</span><br>
+  <ul>
+    <!-- put let before hero to create a template input value called hero-->
+    <!-- iterates is used within its descendants-->
+    <!-- i is index-->
+    <li *ngFor="let hero of heroes; let i = index; trackBy: trackByHeroes" class="notice">
+      {{i + 1}}. id - {{hero.id}}; name - {{hero.name}}
+    </li>
+  </ul>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="part">
+  <h2><a href="https://angular.io/guide/template-syntax#the-ngswitch-directives">NgSwitch</a></h2>
+  <span>use *ngFor="let hero of heroes"</span><br>
+  <li *ngFor="let case of cases; let i = index">
+    <input type="radio" (click)="selectedCase(i)" name="case"> {{i}} <br>
+  </li>
+
+  <div [ngSwitch]="selected" class="notice">
+    result:
+    <span  *ngSwitchCase="0" >{{cases[0]}}, use *ngSwitchCase="0"</span>
+    <span  *ngSwitchCase="1" >{{cases[1]}}, use *ngSwitchCase="1"</span>
+    <span  *ngSwitchCase="2" >{{cases[2]}}, use *ngSwitchCase="2"</span>
+    <span  *ngSwitchCase="3" >{{cases[3]}}, use *ngSwitchCase="3"</span>
+    <span  *ngSwitchCase="4" >{{cases[4]}}, use *ngSwitchCase="4"</span>
+    <span  *ngSwitchDefault>not selected, use *ngSwitchDefault</span>
+  </div>
+</div>

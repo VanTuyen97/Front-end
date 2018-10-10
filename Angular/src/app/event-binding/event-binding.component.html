@@ -22,7 +22,8 @@
     </tr>
     <tr>
       <td><label>name: </label></td>
-      <td><input [value]="hero.name" (input)="hero.name=$event.target.value"/><span>   use [value]="hero.name" (input)="hero.name=$event.target.value"</span></td>
+      <td><input [value]="hero.name" (input)="hero.name=$event.target.value" /><span> use
+          [value]="hero.name" (input)="hero.name=$event.target.value"</span></td>
     </tr>
     <td></td>
     <td><button (click)="eventHandling()">eventHandling</button></td>
@@ -36,11 +37,12 @@
 <br>
 <br>
 <div class="part">
-    <!-- FormModule is required to use NgModole-->
-    <!-- import FormsModule in imports property of @NgModule in app.module.ts file (class AppModule)-->
-    <h2><a href="https://angular.io/guide/template-syntax#ngmodel---two-way-binding-to-form-elements-with-ngmodel">NgModel</a></h2>
-    <span>{{hero.id}}</span><br>
-    <input [(ngModel)]="hero.name"/><span>   use [(ngModel)]="hero.name"</span><br>
-    <input bindon-ngModel = "hero.name"/>
-    <button (click)="eventHandling()">update</button>
-  </div>
+  <!-- FormModule is required to use NgModole-->
+  <!-- import FormsModule in imports property of @NgModule in app.module.ts file (class AppModule)-->
+  <h2><a href="https://angular.io/guide/template-syntax#ngmodel---two-way-binding-to-form-elements-with-ngmodel">NgModel</a></h2>
+  <span>{{hero.id}}</span><br>
+  <input [(ngModel)]="hero.name" /><span> use [(ngModel)]="hero.name"</span><br>
+  <input bindon-ngModel="hero.name" /> <span> use bindon-ngModel = "hero.name"</span><br>
+  <input [(ngModel)]="hero.name" (ngModelChange)="hero.name=$event" /><span> use
+    [(ngModel)]="hero.name" (ngModelChange)="hero.name=$event"</span><br> <button (click)="eventHandling()">update</button>
+</div>

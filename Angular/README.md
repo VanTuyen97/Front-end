@@ -4,17 +4,30 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Required
 
 1. Install angular Cli: `Npm install –g @angular/cli`
-2. Download [Node.js](https://nodejs.org/en/) included [npm](https://www.npmjs.com/)
-3. Install [Visual studio code](https://code.visualstudio.com/)
-   - Install extension [Debug for chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
-   - Install extension [Angular v6 snippets](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2)
-   - Install extension [Angular 6 snippets](https://marketplace.visualstudio.com/items?itemName=Mikael.Angular-BeastCode)
-   - Install extension [Angular language service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
-   - Install extension [Angular essentials](https://marketplace.visualstudio.com/items?itemName=johnpapa.angular-essentials)
-4. Install [in-memory Web API package](https://github.com/angular/in-memory-web-api) from npm: `npm install angular-in-memory-web-api --save`
-## Development server
 
-Run `ng serve` or `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2. Download [Node.js](https://nodejs.org/en/) included [npm](https://www.npmjs.com/)
+
+3. Install [Visual studio code](https://code.visualstudio.com/)
+
+   - Install extension [Debug for chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome)
+   
+   - Install extension [Angular v6 snippets](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2)
+   
+   - Install extension [Angular 6 snippets](https://marketplace.visualstudio.com/items?itemName=Mikael.Angular-BeastCode)
+   
+   - Install extension [Angular language service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
+   
+   - Install extension [Angular essentials](https://marketplace.visualstudio.com/items?itemName=johnpapa.angular-essentials)
+   
+4. Install [in-memory Web API package](https://github.com/angular/in-memory-web-api) from npm: `npm install angular-in-memory-web-api --save`
+## Run project
+1. Clone project: `git clone https://github.com/VanTuyen97/Front-end.git`
+
+2. Install the npm packages described in the package.json: `npm install`
+
+3. Verify that it works: `ng build`
+
+4. Run `ng serve` or `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

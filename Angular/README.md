@@ -43,7 +43,39 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+1. Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+2. Example Teting 
+  <details>
+  
+  ```TypeScript
+  import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule} from '@angular/common/http/testing';
+import { OrderService } from './order.service';
+
+describe('OrderService', () => {// block tester
+  let orderService: OrderService;
+
+  beforeEach(() => {// perpeare module test
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule], // import module use for test (this is test @angular/common/http => @angular/common/http/testing)
+      providers: [OrderService] // services was used to test
+    });
+
+    orderService = TestBed.get(OrderService); // get a instance of OrderServices
+  });
+
+  it('get order by id', () => {// block contain code test
+    // orderService = TestBed.get(OrderService); can use alter
+    orderService.getOrder('5ba8960179b6de243211329e').subscribe(order => {
+      expect(order.renterId).toEqual('i sleep'); // expect value
+    });
+  });
+
+});
+  ```
+  
+  </details>
 
 ## Further help
 

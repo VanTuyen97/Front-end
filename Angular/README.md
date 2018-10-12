@@ -23,7 +23,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Run project
 1. Clone project: `git clone https://github.com/VanTuyen97/Front-end.git`
 
-2. Install the npm packages described in the package.json: `npm install`
+2. Install the npm packages described in the package.json:
+   - open cmd to project folder.
+   -  run command: `npm install`
 
 3. Verify that it works: `ng build`
 
